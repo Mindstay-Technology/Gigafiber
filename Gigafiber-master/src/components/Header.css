@@ -1,0 +1,9 @@
+@media(max-width:768px){
+  .mbnav{
+    /* background: hotpink; */
+    background: linear-gradient(180deg, #730684 0%, #B50505 100%);
+  }
+  .menu{
+    color: white;
+  }
+}
