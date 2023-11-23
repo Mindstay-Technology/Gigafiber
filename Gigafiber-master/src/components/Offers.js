@@ -19,6 +19,7 @@ import gig from "./images/giglog.png";
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { red } from '@mui/material/colors';
 
 // import './Media.css'
@@ -91,9 +92,9 @@ const Offers = () => {
         <Box style={style}>
           <Link
             to={"/"}
-            style={{ position: "absolute", left: "5px", bottom: "20px" }}
+            style={{ position:"absolute", left: "5px", bottom: "20px", }}
           >
-            <ArrowBackIosIcon sx={{color:'brown'}} onClick={handleClose} />
+            <ArrowBackIcon onClick={handleClose} />
           </Link>
           <Accordion className="accord">
             <AccordionSummary
@@ -156,8 +157,6 @@ const Offers = () => {
                   flexDirection={"coloumn"}
                   gap={20}
                   justifyContent={"center"}
-
-                  // borderRadius={20}
                 >
                   <List sx={{ width: "100%", maxWidth: 360, bgcolor: "" }}>
                     {[1, 2, 3, 4, 5].map((value) => (
@@ -181,7 +180,7 @@ const Offers = () => {
                 </Box>
               </Typography>
             </AccordionDetails>
-          </Accordion>{" "}
+          </Accordion>
           <br />
           <Accordion className="accord">
             <AccordionSummary
@@ -222,7 +221,7 @@ const Offers = () => {
                 </Box>
               </Typography>
             </AccordionDetails>
-          </Accordion>{" "}
+          </Accordion>
           <br />
           <Link to={""}>
             <Button

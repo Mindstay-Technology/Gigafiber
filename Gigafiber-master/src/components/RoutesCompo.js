@@ -16,6 +16,7 @@ import Msidebar from './Msidebar';
 import BandwidthM from './BandwidthM';
 import ReferM from './ReferM';
 import LogoutM from './LogoutM';
+// import PaymentM from './PaymentM';
 // import "./Style.css"
 function RoutesCompo() {
   return (
@@ -28,11 +29,13 @@ function RoutesCompo() {
                 <Route path='/moredetail' element={<Moredetail/>}/>
                 <Route path='/datausage' element={<DataUsage/>}/>
                 <Route path='/logout' element={<Logout/>}/>
+                <Route path='/logoutm' element={<LogoutM/>}/>
                 <Route path='/agreement' element={<Agreement/>}/>
                 <Route path='/setting' element={<Setting/>}/>
                 <Route path='/setnotification' element={<Setnotification/>}/>
                 <Route path='/speed' element={<Speed/>}/>
                 <Route path='/payment' element={<Payment/>}/>
+                {/* <Route path='/paymentm' element={<PaymentM/>}/> */}
                 <Route path='/referm' element={<ReferM/>}/>
                 <Route path='/bandwidthm' element={<BandwidthM/>}/>
                 <Route path='logoutm' element={<LogoutM/>}/>

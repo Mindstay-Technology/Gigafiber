@@ -60,7 +60,16 @@ function Mnavinner() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div style={{ height: "120px",background:'white',backgroundImage:'radial-gradient(white 60%,#AB10108A  )'}}>
+    <div
+      style={{
+        height: "120px",
+        background: "white",
+        backgroundImage: "radial-gradient(white 60%,#AB10108A  )",
+        boxShadow: " 0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
+        webkitBoxShadow: "0px 0px 16px -8px rgba(0, 0, 0, 0.68)",
+        borderRadius: "16px",
+      }}
+    >
       <div
         style={{
           // height: "45px",
@@ -68,8 +77,8 @@ function Mnavinner() {
           width: "100%",
           border: "1px solid rgba(195, 26, 127, 0.2)",
           borderRadius: "5px",
-          overflow:'hidden',
-          padding:'10px'
+          overflow: "hidden",
+          padding: "10px",
           // visibility:'hidden'
           // background: "white",
           // marginTop: "20px",
@@ -83,17 +92,25 @@ function Mnavinner() {
             alignItems: "center",
             height: "100px",
             marginTop: "10px",
-            backgroundAttachment:"fixed",
+            backgroundAttachment: "fixed",
             // position:'fixed',
-            zIndex:''
+            zIndex: "",
             // padding:'10px',
             // visibility:'hidden'
           }}
         >
           <Link style={{ textDecoration: "none" }}>
-          <Button sx={{display:'block',textTransform:'capitalize',color:'brown',fontSize:'1rem',padding:'10px'}}>
-            <img src={home} alt="'" height={26} width={26} />
-          <p>  Home</p>
+            <Button
+              sx={{
+                display: "block",
+                textTransform: "capitalize",
+                color: "brown",
+                fontSize: "1rem",
+                padding: "10px",
+              }}
+            >
+              <img src={home} alt="'" height={26} width={26} />
+              <p> Home</p>
             </Button>
           </Link>
 
@@ -105,11 +122,13 @@ function Mnavinner() {
               color: "brown",
               textTransform: "capitalize",
               // display:'block'
-              display:'inline-block',fontSize:'1rem',padding:'10px'
+              display: "inline-block",
+              fontSize: "1rem",
+              padding: "10px",
             }}
           >
             {/* <img src={reciept} alt="'" color="brown" height={30} width={30} /> */}
-            <ReceiptIcon sx={{height:'34px',width:'34px'}} />
+            <ReceiptIcon sx={{ height: "34px", width: "34px" }} />
             <p>Bills</p>
           </Button>
           <Modal
@@ -131,12 +150,12 @@ function Mnavinner() {
               style={{
                 color: "brown",
                 textTransform: "capitalize",
-                display:'block',
-                fontSize:'1rem'
+                display: "block",
+                fontSize: "1rem",
               }}
             >
               {/* <img src={reciept} alt="'" color="brown" height={30} width={30} /> */}
-              <img src={offer} height={'40px'} width={'40px'}/>
+              <img src={offer} height={"40px"} width={"40px"} />
               <p>Offers</p>
             </Button>
             <Modal
@@ -163,9 +182,17 @@ function Mnavinner() {
 
           {/* plans */}
           <span>
-            <Link style={{textDecoration:'none'}}>
-              <Button sx={{display:'block',textTransform:'capitalize',color:'brown',fontSize:'1rem'}}>
-                <CellTowerIcon sx={{height:'34px',width:'34px'}} /> <p>Plans</p>
+            <Link style={{ textDecoration: "none" }}>
+              <Button
+                sx={{
+                  display: "block",
+                  textTransform: "capitalize",
+                  color: "brown",
+                  fontSize: "1rem",
+                }}
+              >
+                <CellTowerIcon sx={{ height: "34px", width: "34px" }} />{" "}
+                <p>Plans</p>
               </Button>
             </Link>
           </span>

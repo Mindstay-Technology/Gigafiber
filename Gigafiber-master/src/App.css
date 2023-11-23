@@ -136,9 +136,9 @@
   color: linear-gradient(to right top, #3c033d, #b50505);
 }
 
-.basic-menu {
-  margin: 0px;
-  padding: 0px;
+#basic-menu {
+  /* position: relative; */
+  /* top: 0px; */
   /* display: flex; */
   /* flex-direction: column; */
 }

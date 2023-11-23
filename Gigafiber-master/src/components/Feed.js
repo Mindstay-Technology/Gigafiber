@@ -89,9 +89,9 @@ const Feed = () => {
               variant="inset"
               style={{ width: "100%", position: "relative", right: "4.4rem" }}
             />
-            <ListItem disablePadding sx={{display:'flex',justifyContent:'space-evenly',alignItems:'center',gap:'90px'}}>
+            <ListItem disablePadding sx={{display:'flex',justifyContent:'space-evenly',alignItems:'center',gap:'100px'}}>
               <Typography>View Plan Info</Typography>
-              <Typography>Add Extra Gb</Typography>
+              <Typography sx={{position:'relative',left:'66px'}}>Add Extra Gb</Typography>
             </ListItem>
           </List>
         </div>

@@ -1,9 +1,15 @@
 .profile-parent{
-    width: 100%;
-    background-color: antiquewhite;
+    /* width: 60%; */
+    background-color: rgb(243, 144, 15);
     /* borderRadius: 10, */
     display: flex;
     justify-content: center;
+    /* flex-direction: column; */
     align-items: center;
-    height: 100vh;
+    height: 80vh;
+    overflow: scroll;
+    /* background-position: 100%; */
+   
+    /* margin-top: 20%; */
+    /* height: 100vh; */
 }

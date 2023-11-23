@@ -50,32 +50,20 @@ import share from "./images/share.png";
 import setting from "./images/setting.png";
 import about from "./images/about.svg";
 import Modal from "@mui/material/Modal";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import DraftsOutlinedIcon from "@mui/icons-material/DraftsOutlined";
-import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
-import StyledToolbar from "@emotion/styled";
-import Icons from "@mui/material/Icon";
+
 import Bill from "./Bill";
 import Notification from "./Notification";
 import Profile from "./Profile";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Logout from "./Logout";
 import Offers from "./Offers";
 import Referal from "./Referal";
 import GridViewOutlined from "@mui/icons-material/GridViewOutlined";
 import SpeedIcon from "@mui/icons-material/Speed";
-import Bandwidth from "./Bandwidth";
-import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Mplan from "./mplan";
-// import Mplan from "./mplan";
-// const color = red[500];
+import Bandwidth from "./Bandwidth"
 import { Link } from "react-router-dom";
 import "./Style.css";
 import Hidden from "@mui/material/Hidden";
 import Msidebar from "./Msidebar";
-// import BSidebar from "./BSidebar";
 import "./Header.css";
 
 const drawerWidth = 140;
@@ -106,6 +94,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
+  background:'antiquewhite',
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
@@ -135,6 +124,7 @@ const Drawer = styled(MuiDrawer, {
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
+  
   ...(open && {
     ...openedMixin(theme),
     "& .MuiDrawer-paper": openedMixin(theme),
@@ -347,10 +337,10 @@ export default function Header() {
                     <Bandwidth />
                   </div>
 
-                  <a href="" className="atag" style={{ fontSize: "1.2vw" }}>
+                  <Link to={'/BandwidthM'} className="atag" style={{ fontSize: "1.2vw" }}>
                     <img src={card} alt="'" height={30} width={30} />
                     Change Payterm
-                  </a>
+                  </Link>
 
                   {/* offers */}
 
@@ -391,7 +381,9 @@ export default function Header() {
             <div>
               <Notification />
             </div>
+
             {/* menu */}
+            
             <Hidden smDown>
               <div>
                 <Button
@@ -403,7 +395,7 @@ export default function Header() {
                 </Button>
 
                 <Menu
-                  id="basic-menu"
+                  // id="basic-menu"
                   anchorEl={anchorEl}
                   open={openn}
                   onClose={handleClosep}
@@ -413,6 +405,7 @@ export default function Header() {
                 >
                   <MenuItem>
                     <Profile />
+                    {/* <Profile1 /> */}
                   </MenuItem>
                   <Button>
                     <MenuItem
@@ -462,7 +455,7 @@ export default function Header() {
             </IconButton>
           </DrawerHeader>
           <Divider />
-          <List sx={{ marginBottom: "50px", height: "150vh" }}>
+          <List sx={{ marginBottom: "50px", height: "200vh", background:'antiquewhite', }}>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <div
                 style={{
@@ -576,7 +569,7 @@ export default function Header() {
                 </Typography>
               </div>
             </Link>
-            <Link to={"/Logout"} style={{ textDecoration: "none" }}>
+            <Link to={"/logoutm"} style={{ textDecoration: "none" }}>
               <div
                 style={{
                   display: "flex",

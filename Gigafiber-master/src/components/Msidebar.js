@@ -115,7 +115,7 @@ export default function Msidebar() {
                 <Typography sx={{color:'brown'}}>Data Usage</Typography>
               </div>
             </Link>
-            <Link to={""} style={link}>
+            <Link to={"/setting"} style={link}>
               <div
                 style={div}
               >

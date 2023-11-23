@@ -1,77 +1,13 @@
-// import React from "react";
-// import "./Style.css";
-// import Button from "@mui/material/Button";
 
-// function Payment() {
-//   return (
-//     <div style={{ background: "white" }}>
-//       <div
-//         style={{
-//           background:
-//             "linear-gradient(rgba(30, 8, 80, 0.63),rgba(233, 53, 53, 0.26))",
-//           padding: "40px",
-//           borderRadius: "20px",
-//           display: "flex",
-//           flexDirection: "column",
-//         }}
-//       >
-//         <div
-//           style={{
-//             display: "flex",
-//             flexDirection: "column",
-//             background: "linear-gradient(#DCDEEA,#FFFFFF00)",
-//             borderRadius: "20px",
-//           }}
-//         >
-//           <div className="data-list">
-//             <p>Customer name</p>
-//             <p>stella</p>
-//           </div>
-//           <div className="data-list">
-//             <p>Account No</p>
-//             <p>0000000000</p>
-//           </div>
-//           <div className="data-list">
-//             <p>fg</p>
-//             <p>jjkl;</p>
-//           </div>
-//           <div className="data-list">
-//             <p>ghjk</p>
-//             <p>tyhu</p>
-//           </div>
-//         </div>
-//         <div style={{ background: "white", borderRadius: "20px",padding:'40px' }}>
-//           <div className="data-list">
-//             <p>fdftyui</p>
-//             <p>tryuio</p>
-//           </div>
-//           <div className="data-list">
-//             <p>fdftyui</p>
-//             <p>tryuio</p>
-//           </div>
-//           <div className="data-list">
-//             <p>fdftyui</p>
-//             <p>tryuio</p>
-//           </div>
-//           <div style={{display:'flex',justifyContent:'center',alignItems:'center',padding:'10px'}}>
-//             <Button style={{
-//               background: "linear-gradient(180deg, #46096B 0%, #6B0909 100%)",color:'white',width:'200px'
-//             }}>Pay Now</Button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Payment;
 
 import { List } from "@mui/icons-material";
-import { Button, Typography } from "@mui/material";
+import { Button, Hidden, Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import React from "react";
 import "./Style.css";
+import { Link } from "react-router-dom";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 function Payment() {
   const products = [
@@ -91,6 +27,7 @@ function Payment() {
 
   return (
     <div style={{ background: "white" }}>
+    <Hidden smDown>
       <div
         style={{
           background: "linear-gradient(#3C0850A1,#E9353542)",
@@ -101,16 +38,20 @@ function Payment() {
           alignItems: "center",
           flexDirection: "column",
           backgroundRepeat: "no-repeat",
+          // marginTop:'30px'
+          
         }}
       >
         <div
           style={{
-            width: "30%",
-            height:'40vh',
+            width: "25%",
+            height:'50vh',
             background: "linear-gradient(#DCDEEA,#FFFFFF00)",
             borderRadius: "20px",
             padding: "20px",
             paddingBottom: "3px",
+            position:'relative',
+          top:'60px'
           }}
         >
           {" "}
@@ -132,18 +73,15 @@ function Payment() {
         </div>
         <div
           style={{
-            // display: "flex",
-            // justifyContent: "space-around",
-            // flexDirection:'column',
             background: "white",
-            // padding: "500px",
             paddingTop: "3px",
             borderRadius: "20px",
             margin:'auto',
-            width: "30%",
-            height:'45vh',
+            width: "22%",
+            height:'40vh',
             position:'relative',
-            bottom:'60px'
+            bottom:'70px',
+            padding:'20px'
           }}
         >
           {amount.map((money, index) => (
@@ -155,10 +93,6 @@ function Payment() {
                 alignItems: "center",
                 textJustify: "auto",
                 padding: "10px",
-                // margin:'auto'
-                // gap: 50,
-                // fontFamily: "Poppins",
-                // fontSize:'2vw'
               }}
             >
               <Typography variant="">{money.a}</Typography>
@@ -167,22 +101,105 @@ function Payment() {
           ))}
         </div>{" "}
         {/* <br /> */}
-        <div
-          style={{
-            //   background: "linear-gradient(180deg, #46096B 0%, #6B0909 100%)",
-            //   textAlign: "center",
-            //   width: "200px",
-            //   borderRadius:'20px',
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Button className="markodenic-button">Pay Now</Button>
+        <div>
+          <Button className="markodenic-button" sx={{color:'white'}}>Pay Now</Button>
         </div>
       </div>
+      </Hidden>
+
+
+      <Hidden smUp>
+      <Link
+              to={"/"}
+              style={{ position: "absolute", left: "20px", top: "120px" }}
+            >
+              <ArrowBackIcon sx={{ height: "30px", width: "30px",color:'brown' }} />
+            </Link>
+      <div
+        style={{
+          background: "linear-gradient(#3C0850A1,#E9353542)",
+          padding: "px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          backgroundRepeat: "no-repeat",
+          marginTop:'100px'
+        }}
+      >
+      {/* <Hidden smUp> */}
+            
+          {/* </Hidden> */}
+        <div
+          style={{
+            width: "90%", // Adjusted width for better mobile view
+            background: "linear-gradient(#DCDEEA,#FFFFFF00)",
+            borderRadius: "20px",
+            padding: "20px",
+            paddingBottom: "3px",
+            marginTop: "20px", // Added margin for separation
+          }}
+        >
+          {products.map((product, index) => (
+            <div
+              key={index}
+              style={{
+                display: "flex",
+                flexDirection: "row", // Changed to column for better mobile view
+                justifyContent: "space-between",
+                padding: "10px",
+              }}
+            >
+              <Typography variant="subtitle1">{product.x}</Typography>
+              <Typography variant="subtitle1">{product.y}</Typography>
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            background: "white",
+            paddingTop: "3px",
+            borderRadius: "20px",
+            margin: "20px 0", // Added margin for separation
+            width: "90%", // Adjusted width for better mobile view
+            padding: "20px",
+          }}
+        >
+          {amount.map((money, index) => (
+            <div
+              key={index}
+              style={{
+                display: "flex",
+                flexDirection: "row", // Changed to column for better mobile view
+                justifyContent: "space-between",
+                alignItems: "center",
+                textJustify: "auto",
+                padding: "10px",
+              }}
+            >
+              <Typography variant="subtitle1">{money.a}</Typography>
+              <Typography variant="subtitle1">{money.b}</Typography>
+            </div>
+          ))}
+        </div> <br /> <br />  <br />
+        <div>
+          <Button
+            className="markodenic-button"
+            sx={{
+              color: 'white',
+              backgroundColor: '#3C0850',
+              borderRadius: '8px',
+              // width: '90%', // Adjusted width for better mobile view
+              margin: '20px 0', // Added margin for separation
+              padding:'10px'
+            }}
+          >
+            Pay Now
+          </Button>
+        </div>
+      </div>
+      </Hidden>
     </div>
-    // </div>
   );
 }
 

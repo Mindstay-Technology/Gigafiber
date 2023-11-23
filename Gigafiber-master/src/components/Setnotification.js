@@ -10,7 +10,7 @@ import BluetoothIcon from "@mui/icons-material/Bluetooth";
 import "./Style2.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
-
+import { Hidden } from "@mui/material";
 
 function Setnotification() {
   const [checked, setChecked] = React.useState(["wifi"]);
@@ -29,7 +29,14 @@ function Setnotification() {
   };
 
   return (
-    <div style={{ background: "white",display:'flex',justifyContent:'center',alignItems:'center' }}>
+    <div
+      style={{
+        background: "white",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <div
         style={{
           background: "linear-gradient(#460C4F73,#4F0C0CC2)",
@@ -40,18 +47,41 @@ function Setnotification() {
           lineHeight: "28px",
           letterSpacing: "0em",
           textAlign: "center",
-          padding: "40px",
-          width:'100%',
-          display:'flex',
-          alignItems:'center',
-          justifyContent:'center'
-
+          // padding: "40px",
+          width: "100%",
+          // minWidth:'40%',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          // marginTop:'50px'
         }}
       >
-      <Link to={'/'} style={{position:'absolute',left:'5px',top:'5px'}}><ArrowBackIcon/></Link>
         <div
-          style={{ background: "#FFFFFF", borderRadius: "20px", width: "40%",padding:'50px',paddingTop:'20px' }}
+          style={{
+            background: "#FFFFFF",
+            borderRadius: "20px",
+            minWidth: "30%",
+            maxWidth: "100%",
+            padding: "50px",
+            paddingTop: "20px",
+            marginTop: "50px",
+          }}
         >
+          <Hidden smDown><Link
+            to={"/"}
+            style={{ position: "absolute", left: "25px", top: "5px" }}
+          >
+            <ArrowBackIcon sx={{ height: "40px", width: "40px" }} />
+          </Link></Hidden>
+          <Hidden smUp>
+            <Link
+              to={"/"}
+              style={{ position: "absolute", left: "30px", top: "170px" }}
+            >
+              <ArrowBackIcon sx={{ height: "30px", width: "30px",color:'brown' }} />
+            </Link>
+          </Hidden>
           <p>Notification</p>
           <List
             sx={{ textAlign: "left" }}
@@ -70,33 +100,17 @@ function Setnotification() {
                   id="switch-list-label-wifi"
                   primary="General Notification"
                 />
-                {/* <Switch
-                edge="end"
-                onChange={handleToggle("wifi")}
-                checked={checked.indexOf("wifi") !== -1}
-                // inputProps={{
-                //   "aria-labelledby": "switch-list-label-wifi",
-                // }}
-              /> */}
-                {/* <input type="checkbox" id="switch" class="checkbox" /> */}
-
-                {/* <label for="switch" class="toggle"> */}
-                {/* <p>OFF ON</p> */}
-                {/* </label> */}
                 <label class="switch">
                   <input type="checkbox" />
                   <span class="slider round"></span>
                 </label>
               </ListItem>
               <ListItem>
-                {/* <ListItemIcon>
-                <BluetoothIcon />
-              </ListItemIcon> */}
                 <ListItemText
                   id="switch-list-label-bluetooth"
                   primary="Sound"
                 />
-               
+
                 <label class="switch">
                   <input type="checkbox" />
                   <span class="slider round"></span>
@@ -110,7 +124,7 @@ function Setnotification() {
                 </label>
               </ListItem>
             </List>{" "}
-            <br />  
+            <br />
             <List
               sx={{ textAlign: "left" }}
               subheader={
@@ -120,51 +134,20 @@ function Setnotification() {
               }
             >
               <ListItem>
-                {/* <ListItemIcon>
-                <WifiIcon />
-              </ListItemIcon> */}
                 <ListItemText
                   id="switch-list-label-wifi"
                   primary="App Updates"
                 />
-                {/* <Switch
-                edge="end"
-                onChange={handleToggle("wifi")}
-                checked={checked.indexOf("wifi") !== -1}
-                // inputProps={{
-                //   "aria-labelledby": "switch-list-label-wifi",
-                // }}
-              /> */}
-                {/* <input type="checkbox" id="switch" class="checkbox" /> */}
-
-                {/* <label for="switch" class="toggle"> */}
-                {/* <p>OFF ON</p> */}
-                {/* </label> */}
                 <label class="switch">
                   <input type="checkbox" />
                   <span class="slider round"></span>
                 </label>
               </ListItem>
               <ListItem>
-                {/* <ListItemIcon>
-                <BluetoothIcon />
-              </ListItemIcon> */}
                 <ListItemText
                   id="switch-list-label-bluetooth"
                   primary="Bill Remainder"
                 />
-                {/* <Switch
-                edge="end"
-                onChange={handleToggle("bluetooth")}
-                checked={checked.indexOf("bluetooth") !== -1}
-                inputProps={{
-                  "aria-labelledby": "switch-list-label-bluetooth",
-                }}
-              /> */}
-                {/* <input type="checkbox" id="switch" class="checkbox" />
-              <label for="switch" class="toggle">
-                <p>OFF ON</p>
-              </label> */}
                 <label class="switch">
                   <input type="checkbox" />
                   <span class="slider round"></span>
@@ -200,22 +183,3 @@ function Setnotification() {
 }
 
 export default Setnotification;
-
-// import * as React from 'react';
-// import Switch from '@mui/material/Switch';
-
-// export default function Setnotification() {
-//   const [checked, setChecked] = React.useState(true);
-
-//   const handleChange = (event) => {
-//     setChecked(event.target.checked);
-//   };
-
-//   return (
-//     <Switch
-//       checked={checked}
-//       onChange={handleChange}
-//       inputProps={{ 'aria-label': 'controlled' }}
-//     />
-//   );
-// }

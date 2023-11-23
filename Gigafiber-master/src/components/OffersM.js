@@ -86,7 +86,7 @@ function OffersM() {
                         <Typography>gfhj</Typography>
                       </ListItem>
                     ))}
-                    <Link to={"/Payment"}>
+                    <Link to={"/payment"}>
                       <Button
                         sx={{
                           background: "linear-gradient(#904bac,#8e3035)",

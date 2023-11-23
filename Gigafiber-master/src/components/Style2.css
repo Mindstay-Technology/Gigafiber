@@ -5,19 +5,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding: 10px; */
 }
 
 .monthly {
   background: linear-gradient(#381247c2, #470b0eb8);
-  width: 60%;
+  width: 96%;
   height: 100px;
+
+  /* margin: auto; */
+  /* display: flex;  */
+  /* align-items: center; */
+  /* justify-content: space-around; */
 }
 .monthly ul {
   display: flex;
-  justify-content: space-around;
-  /* align-items: center; */
+  justify-content: space-around;  
   align-items: center;
+  margin: auto;
+  /* margin-top: 50%; */
 }
+
+.monthly ul li{
+  position: relative;
+  top: 30px; 
+  margin: auto;
+  /* padding: 30px; */
+}
+
 
 .button-monthly {
   background: linear-gradient(#46096b, #6b0909);
@@ -25,7 +40,8 @@
 }
 
 .text {
-  font-size: 1.7vw;
+  font-size: 0.9rem;
+  color: white;
 }
 
 .more-bar {

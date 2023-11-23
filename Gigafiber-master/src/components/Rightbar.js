@@ -63,6 +63,10 @@ const Rightbar = () => {
               height:  "35px",
               width: "40px",
               background: "linear-gradient(180deg, #730684 0%, #B50505 100%)",
+              zIndex:'0',
+              position:'relative',
+              top:'10px'
+
             }}
           >
             <AddIcon sx={{ color: "white" }} />
@@ -70,13 +74,13 @@ const Rightbar = () => {
           {/* </Button> */}
         </div>{" "}
         <br />
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              gap: "5px",
+              gap: "10px",
             }}
           >
             <Avatar src="" />
@@ -94,6 +98,10 @@ const Rightbar = () => {
               height: "35px",
               width: "40px",
               background: "linear-gradient(180deg, #730684 0%, #B50505 100%)",
+              zIndex:'0',
+              position:'relative',
+              top:'10px'
+
               // marginLeft:'3%'
             }}
           >
@@ -125,6 +133,9 @@ const Rightbar = () => {
               height:  "35px",
               width: "40px",
               background: "linear-gradient(180deg, #730684 0%, #B50505 100%)",
+              zIndex:'0',position:'relative',
+              top:'10px'
+
             }}
           >
             <AddIcon sx={{ color: "white" }} />
@@ -155,6 +166,9 @@ const Rightbar = () => {
               height:  "35px",
               width: "40px",
               background: "linear-gradient(180deg, #730684 0%, #B50505 100%)",
+              zIndex:'0',position:'relative',
+              top:'10px'
+
             }}
           >
             <AddIcon sx={{ color: "white" }} />
@@ -176,17 +190,14 @@ const Rightbar = () => {
               Unlimited GB 100MBPS+8000 Grocery Points
             </Typography>
           </div>
-          {/* <Button>
-            <img src={gridicon} alt="" width="45vw" height="45vw" />
-          </Button> */}
           <Fab
-            // aria-label="add"
             sx={{
               height:  "35px",
               width: "40px",
               background: "linear-gradient(180deg, #730684 0%, #B50505 100%)",
               position:'relative',
-              zIndex:'5'
+              top:"10px",
+              zIndex:'0'
             }}
           >
             <AddIcon sx={{ color: "white" }} />

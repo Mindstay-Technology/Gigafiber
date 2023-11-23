@@ -15,9 +15,7 @@ const Datausage = () => {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
+  
 
   const handleChange = (range) => {
     const [startDate, endDate] = range;
@@ -34,28 +32,6 @@ const Datausage = () => {
         flexDirection: "column",
       }}
     >
-      {/* <div className="date-main">
-          <label htmlFor="">From</label> 
-          <DatePicker
-            selectsStart
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            startDate={startDate}
-            className="date"
-          />
-        </div> 
-        <div className="date-main1">
-          <label htmlFor="">To</label> 
-          <DatePicker
-            selectsEnd
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            endDate={endDate}
-            startDate={startDate}
-            minDate={startDate}
-            className="date"
-          />
-        </div> */}
       <div className="main-container">
         <Link to={"/"} style={{position:'absolute',left:'5px',top:'30px'}}>
           <ArrowBackIosIcon />
